@@ -491,6 +491,11 @@ h2 span {
 @media (max-width: 1000px) {
   .column2 {
     width: 100%;
+    padding-bottom: 1%;
+  }
+  .column3 {
+    width: 100%;
+    padding-bottom: 1%;
   }
 }
 
