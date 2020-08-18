@@ -387,12 +387,31 @@ banner
   margin: 0 auto;
 }
 
+.snakecam {
+  max-width: 25%;
+}
+
+.swab {
+  max-width: 50%;
+}
+
+.pf1000 {
+  max-width: 50%;
+}
+
+.fish-ekf {
+  max-width: 50%;
+}
+
 @media (max-width: 1000px) {
   .img-fill img {
     max-width: 100%;
     position: relative;
     display: inline-block;
     margin: 0 auto;
+  }
+  .single-img {
+    max-width: 100%;
   }
 }
 
