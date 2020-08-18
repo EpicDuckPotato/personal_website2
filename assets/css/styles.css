@@ -307,6 +307,9 @@ a.text-button-icon:hover i {
   padding-bottom: 5%;
 }
 
+div {
+  word-wrap:break-word;
+}
 
 /* 
 ---------------------------------------------
