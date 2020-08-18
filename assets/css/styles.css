@@ -379,6 +379,10 @@ banner
   max-width: 50%;
 }
 
+.imu-diagnostic {
+  max-width: 50%;
+}
+
 .capstone-arm {
   max-width: 50%;
 }

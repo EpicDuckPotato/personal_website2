@@ -83,16 +83,24 @@
           <p>I developed a pipeline to estimate the position and orientation of a moving camera using OpenCV and ROS, performing nonlinear optimization using Ceres Solver. Below are the results on the KITTI dataset. One of my current goals is to integrate other sensors into this pipeline and use it for snake robots.</p></br>
           <p>Code (C++): <a href="https://github.com/EpicDuckPotato/stereo_vo/tree/bundle_adjustment">https://github.com/EpicDuckPotato/stereo_vo/tree/bundle_adjustment</a></p></br>
           </p>
-          <img src="assets/images/kitti.gif" alt="Visual Odometry" style="max-width: 100%"></br></br>
-
+          <video autoplay loop muted playsinline style="max-width:100%">
+            <source src="assets/images/kitti.webm" type="video/webm">
+            <source src="assets/images/kitti.mp4" type="video/mp4">
+          </video></br></br>
           <h4>Extended Kalman Filter</h4>
           <p>I wrote an extended Kalman filter (EKF) to estimate the orientation of a snake robot. It fuses data from all the inertial measurement units (IMUs) and encoders on the snake's body, and incorporates outlier detection to account for individual sensor failures. I used the algorithm from "Robust State Estimation With Redundant Proprioceptive Sensors," by David Rollinson. I used C++ within a ROS environment.</p></br>
           <div class="row2">
             <div class="column2">
-              <img src="assets/images/ekf_roll.gif" alt="EKF for Rolling Snake" style="width:100%">
+              <video autoplay loop muted playsinline style="width:100%">
+                <source src="assets/images/ekf_roll.webm" type="video/webm">
+                <source src="assets/images/ekf_roll.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="column2">
-              <img src="assets/images/ekf_sidewind.gif" alt="EKF for Sidewinding Snake" style="width:100%">
+              <video autoplay loop muted playsinline style="width:100%">
+                <source src="assets/images/ekf_sidewind.webm" type="video/webm">
+                <source src="assets/images/ekf_sidewind.mp4" type="video/mp4">
+              </video>
             </div>
           </div></br>
 
@@ -102,10 +110,16 @@
           </p></br>
           <div class="row2">
             <div class="column2">
-              <img src="assets/images/pegs.gif" alt="Compliant Peg Glide" style="width:100%">
+              <video autoplay loop muted playsinline style="width:100%">
+                <source src="assets/images/pegs.webm" type="video/webm">
+                <source src="assets/images/pegs.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="column2">
-              <img src="assets/images/temporal.gif" alt="Temporal Phase Compliance" style="width:100%">
+              <video autoplay loop muted playsinline style="width:100%">
+                <source src="assets/images/temporal.webm" type="video/webm">
+                <source src="assets/images/temporal.mp4" type="video/mp4">
+              </video>
             </div>
           </div></br>
 
@@ -113,7 +127,10 @@
           <p>
             The lab needed a tool to quickly diagnose stale sensors on the snake. I developed this tool within a wxPython GUI.
           </p></br>
-          <img src="assets/images/imu_diagnostic.gif" alt="Diagnostic Tool" style="max-width: 100%"></br></br>
+          <video autoplay loop muted playsinline class="single-img imu-diagnostic">
+            <source src="assets/images/imu_diagnostic.webm" type="video/webm">
+            <source src="assets/images/imu_diagnostic.mp4" type="video/mp4">
+          </video></br></br>
           <h4><u>Auto-Orienting Camera Feed</u></h4>
           <p>
             The orientation of a snake robot's head changes constantly as it moves. Even if the snake's head is upside down relative to its starting orientation, its operator should have a right-side up camera feed. I implemented this functionality in a ROS node using Python and OpenCV.
@@ -146,7 +163,10 @@
           <p>
             After deriving this algorithm, I used it to design an extended Kalman filter (EKF). The EKF tracks the fish 90 times faster than the existing particle filter, and offers the same level of accuracy when certain physical assumptions hold. Understanding when these assumptions break down is an area of future research.
           </p></br>
-          <img src="assets/images/fish_ekf.gif" class="fish-ekf single-img" alt="Extended Kalman Filter"></br></br>
+          <video autoplay loop muted playsinline class="single-img fish-ekf">
+            <source src="assets/images/fish_ekf.webm" type="video/webm">
+            <source src="assets/images/fish_ekf.mp4" type="video/mp4">
+          </video></br></br>
           <p>
             I was awarded "Best Presentation" at the <a href="https://wse.zoom.us/rec/play/6ZUucu-v-G03ToXAtgSDU6cvW9S9K6-s0Hcd-_cPn0e8UXgGZFOiNeEbauUnJOy_C3p-Py72nm1nFhGi?startTime=1596200357000&_x_zm_rtaid=XtT_lu14RtKNrVmg-Bcnlg.1596234340255.7ea05ba9d1c634e205433cfec51a2310&_x_zm_rhtaid=215">final REU seminar</a> for my work. I primarily worked in MATLAB.
           </p></br>
@@ -184,13 +204,19 @@
             <div class="row2">
               <div class="column2">
                 <figure>
-                  <img src="assets/images/hello_world2.gif" alt="Network writes 'Hello world!'" style="width:100%">
+                  <video autoplay loop muted playsinline style="width:100%">
+                    <source src="assets/images/hello_world.webm" type="video/webm">
+                    <source src="assets/images/hello_world.mp4" type="video/mp4">
+                  </video>
                   <figcaption>Input: "Hello world!"</figcaption>
                 </figure>
               </div>
               <div class="column2">
                 <figure>
-                  <img src="assets/images/myname2.gif" alt="Network writes 'My name is Anoop Bhat'" style="width:100%">
+                  <video autoplay loop muted playsinline style="width:100%">
+                    <source src="assets/images/myname.webm" type="video/webm">
+                    <source src="assets/images/myname.mp4" type="video/mp4">
+                  </video>
                   <figcaption>Input: "My name is Anoop Bhat"</figcaption>
                 </figure>
               </div>
@@ -199,13 +225,19 @@
             <div class="row2">
               <div class="column2">
                 <figure>
-                  <img src="assets/images/hello_world.gif" alt="Network writes 'Hello world!'" style="width:100%">
+                  <video autoplay loop muted playsinline style="width:100%">
+                    <source src="assets/images/hello_world2.webm" type="video/webm">
+                    <source src="assets/images/hello_world2.mp4" type="video/mp4">
+                  </video>
                   <figcaption>Input: "Hello world!"</figcaption>
                 </figure>
               </div>
               <div class="column2">
                 <figure>
-                  <img src="assets/images/myname.gif" alt="Network writes 'My name is Anoop Bhat'" style="width:100%">
+                  <video autoplay loop muted playsinline style="width:100%">
+                    <source src="assets/images/myname2.webm" type="video/webm">
+                    <source src="assets/images/myname2.mp4" type="video/mp4">
+                  </video>
                   <figcaption>Input: "My name is Anoop Bhat"</figcaption>
                 </figure>
               </div>
@@ -217,7 +249,10 @@
               For my final project in "Introduction to Robotics," I designed and controlled a nasal swabbing robot within a Gazebo simulation environment.</br></br>
               Code (C++): <a href="https://github.com/EpicDuckPotato/RobotSwabber">https://github.com/EpicDuckPotato/RobotSwabber</a>
             </p></br>
-            <img src="assets/images/swab.gif" class="swab single-img" alt="Robot Swabber"/></br></br>
+            <video autoplay loop muted playsinline class="single-img swab">
+              <source src="assets/images/swab.webm" type="video/webm">
+              <source src="assets/images/swab.mp4" type="video/mp4">
+            </video></br></br>
             <h2>Rube Goldberg Machine
               <span>January 2019</span>
             </h2>
@@ -244,6 +279,7 @@
               One of the fundamental problems in quantum mechanics is finding the "ground state" wave function of a quantum system. For many-body systems, simply storing this wave function requires an impractically large amount of memory, and computing it becomes infeasible using traditional methods.</br></br>
               During Hack the Universe, I worked on a team to compute the ground state wave function using a neural network, specifically a restricted Boltzmann machine. We implemented the algorithm from "Solving the Quantum Many-Body Problem with Artificial Neural Networks," by Giuseppe Carleo.</br></br>
               Code (Python): <a href="https://github.com/evannw/htuquantumml">https://github.com/evannw/htuquantumml</a></p></br>
+              <img src="assets/images/schrodinger.png" alt="Schrodinger's Equation" class="single-img"></br></br>
             <h2>Trobots
               <span>January 2019</span>
             </h2>
