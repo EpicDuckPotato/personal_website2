@@ -403,6 +403,10 @@ banner
   max-width: 50%;
 }
 
+.capstone-arm {
+  max-width: 50%;
+}
+
 @media (max-width: 1000px) {
   .img-fill img {
     max-width: 100%;
