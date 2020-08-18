@@ -334,6 +334,11 @@ header
   z-index: 99999;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
 /* Links inside the navbar */
 .navigationbar a {
   float: left;
