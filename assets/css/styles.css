@@ -363,19 +363,25 @@ banner
 */
 /* ==== Main CSS === */
 .img-fill{
-  max-width: 100%;
-  padding-top: 15%;
-  padding-bottom: 15%;
+  padding-top: 4%;
+  padding-bottom: 4%;
   display: block;
   overflow: hidden;
   position: relative;
-  text-align: center
+  text-align: center;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .img-fill img {
   max-width: 50%;
   position: relative;
   display: inline-block;
+  margin: 0 auto;
 }
 
 *,
