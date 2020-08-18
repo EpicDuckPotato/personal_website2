@@ -85,7 +85,9 @@
 
           <h4>Stereo Visual Odometry</h4>
           <p>I developed a pipeline to estimate the position and orientation of a moving camera using OpenCV and ROS, performing nonlinear optimization using Ceres Solver. Below are the results on the KITTI dataset. One of my current goals is to integrate other sensors into this pipeline and use it for snake robots.</p></br>
-          <p>Code (C++): <a href="https://github.com/EpicDuckPotato/stereo_vo/tree/bundle_adjustment">https://github.com/EpicDuckPotato/stereo_vo/tree/bundle_adjustment</a></p></br>
+          <p>Code (C++): </p>
+          <a href="https://github.com/EpicDuckPotato/stereo_vo/tree/bundle_adjustment">https://github.com/EpicDuckPotato/stereo_vo/tree/bundle_adjustment</a>
+          </br>
           </p>
           <img src="assets/images/kitti.gif" alt="Visual Odometry" style="max-width: 100%"></br></br>
 
@@ -123,6 +125,50 @@
             The orientation of a snake robot's head changes constantly as it moves. Even if the snake's head is upside down relative to its starting orientation, its operator should have a right-side up camera feed. I implemented this functionality in a ROS node using Python and OpenCV.
           </p></br>
           <img src="assets/images/snakecam.jpg" alt="Snake Camera" style="max-width: 25%"></br></br>
+
+          <h2>Johns Hopkins University: LIMBS Lab
+            <span>NSF REU Research Intern (May 2020-July 2020)</span>
+          </h2>
+          <p>
+            As a researcher at Johns Hopkins, I developed algorithms to estimate the pose of weakly electric fish with an array of electrodes. Estimating these fishes' states will be useful in understanding their group behavior, as well as the ecology of their environment.</br></br>
+
+            One of my main accomplishments was deriving a physics-based algorithm to efficiently initialize electric fish trackers. My algorithm relies on the interpolated potential and gradient fields shown below. The actual fish pose is shown using a black ellipse, and the electrodes are shown with black dots.
+          </p></br>
+          <div class="row3">
+            <div class="column3">
+              <img src="assets/images/init1.png" alt="Potential Field 1" style="width:100%">
+            </div>
+            <div class="column3">
+              <img src="assets/images/init2.png" alt="Potential Field 2" style="width:100%">
+            </div>
+            <div class="column3">
+              <img src="assets/images/init3.png" alt="Potential Field 3" style="width:100%">
+            </div>
+          </div></br>
+          <p>
+            Using this algorithm, I made the lab's existing fish tracker 250 times more memory efficient. Specifically, the existing tracker used a particle filter with 250,000 particles. With my initialization method, it only needs 1,000.
+          </p></br>
+          <img src="assets/images/pf1000.gif" alt="Particle Filter" style="width:50%"></br>
+          <p>
+            After deriving this algorithm, I used it to design an extended Kalman filter (EKF). The EKF tracks the fish 90 times faster than the existing particle filter, and offers the same level of accuracy when certain physical assumptions hold. Understanding when these assumptions break down is an area of future research.
+          </p></br>
+          <img src="assets/images/fish_ekf.gif" alt="Extended Kalman Filter" style="width:50%"></br></br>
+          <p>
+            I was awarded "Best Presentation" at the <a href="https://wse.zoom.us/rec/play/6ZUucu-v-G03ToXAtgSDU6cvW9S9K6-s0Hcd-_cPn0e8UXgGZFOiNeEbauUnJOy_C3p-Py72nm1nFhGi?startTime=1596200357000&_x_zm_rtaid=XtT_lu14RtKNrVmg-Bcnlg.1596234340255.7ea05ba9d1c634e205433cfec51a2310&_x_zm_rhtaid=215">final REU seminar</a> for my work. I primarily worked in MATLAB.
+          </p></br>
+
+          <h2>Analytical Graphics Inc.
+            <span>Software Engineering Intern (May 2019-July 2019)</span>
+          </h2>
+          <p>
+            As an intern at AGI, I worked on STK Components, an aerospace simulation API for C# and Java. My main accomplishments were:
+          </p></br>
+          <ul class="AGI">
+            <li>Enabling higher resolution terrain simulation by adding support for a new type of terrain file</li>
+            <li>Writing a <a href="https://help.agi.com/AGIComponents/html/NumericalIntegrators.htm">tutorial page</a> for Components' numerical integrators, analyzing their effectiveness for various systems of differential equations</li>
+            <li>Testing Components’ astronomical capabilities against the Standards of Fundamental Astronomy</li>
+            <li>Adding new coordinate types (<a href="https://help.agi.com/STKComponents/html/T_AGI_Foundation_Geometry_DynamicDelaunayElements.htm">DynamicDelaunayElements</a>, <a href="https://help.agi.com/STKComponents/html/T_AGI_Foundation_Geometry_DynamicDelaunayElements.htm">DynamicEquinoctialElements</a>, <a href="https://help.agi.com/STKComponents/html/T_AGI_Foundation_Geometry_DynamicDelaunayElements.htm">DynamicKozaiIzsakMeanElements</a>) for orbit representation.</li>
+          </ul>
         </div>
     </section>
     <!-- ***** Work Area Ends ***** -->
@@ -132,22 +178,87 @@
         <div class="section-heading">
             <h6>Projects</h6>
         </div>
+        <div class="section-content">
+            <h2>Scribble
+              <span>June 2020-August 2020</span>
+            </h2>
+            <p>
+              I trained a neural network to generate handwriting for a given input string, using the network architecture from Alex Graves' famous paper "Generating Sequences With Recurrent Neural Networks." I implemented the network in PyTorch.</br></br>
+              Code (Python): <a href="https://colab.research.google.com/drive/1O1newbojussOslQkaOxmYnI6PtW_WwQ9?usp=sharing">https://colab.research.google.com/drive/1O1newbojussOslQkaOxmYnI6PtW_WwQ9?usp=sharing</a></br>
+            </p>
+
+            <div class="row2">
+              <div class="column2">
+                <figure>
+                  <img src="assets/images/hello_world2.gif" alt="Network writes 'Hello world!'" style="width:100%">
+                  <figcaption>Input: "Hello world!"</figcaption>
+                </figure>
+              </div>
+              <div class="column2">
+                <figure>
+                  <img src="assets/images/myname2.gif" alt="Network writes 'My name is Anoop Bhat'" style="width:100%">
+                  <figcaption>Input: "My name is Anoop Bhat"</figcaption>
+                </figure>
+              </div>
+            </div></br>
+            <div class="row2">
+              <div class="column2">
+                <figure>
+                  <img src="assets/images/hello_world.gif" alt="Network writes 'Hello world!'" style="width:100%">
+                  <figcaption>Input: "Hello world!"</figcaption>
+                </figure>
+              </div>
+              <div class="column2">
+                <figure>
+                  <img src="assets/images/myname.gif" alt="Network writes 'My name is Anoop Bhat'" style="width:100%">
+                  <figcaption>Input: "My name is Anoop Bhat"</figcaption>
+                </figure>
+              </div>
+            </div></br>
+            <h2>Robotic Medical Assistant
+              <span>April 2020-May 2020</span>
+            </h2>
+            <p>
+              For my final project in "Introduction to Robotics," I designed and controlled a nasal swabbing robot within a Gazebo simulation environment.</br></br>
+              Code (C++): <a href="https://github.com/EpicDuckPotato/RobotSwabber">https://github.com/EpicDuckPotato/RobotSwabber</a>
+            </p></br>
+            <img src="assets/images/swab.gif" alt="Robot Swabber" style="width: 50%"/></br></br>
+            <h2>Robot Kinematics and Dynamics Capstone
+              <span>November 2019-December 2019</span>
+            </h2>
+            <p>
+              For my final project in "Robot Kinematics and Dynamics," I programmed a 5 degree-of-freedom robotic arm to traverse a series of narrow mazes without touching the sides. I implemented trajectory planning using inverse kinematics and spline interpolation, as well as gravity compensation, all in MATLAB.
+            </p></br>
+            <img src="assets/images/capstone_arm.png" alt="Capstone Arm" style="width: 50%"/></br>
+            <h2>Hack the Universe
+              <span>February 2019</span>
+            </h2>
+            <p>
+              One of the fundamental problems in quantum mechanics is finding the "ground state" wave function of a quantum system. For many-body systems, simply storing this wave function requires an impractically large amount of memory, and computing it becomes infeasible using traditional methods.</br></br>
+              During Hack the Universe, I worked on a team to compute the ground state wave function using a neural network, specifically a restricted Boltzmann machine. We implemented the algorithm from "Solving the Quantum Many-Body Problem with Artificial Neural Networks," by Giuseppe Carleo.</br></br>
+              Code (Python): <a href="https://github.com/evannw/htuquantumml">https://github.com/evannw/htuquantumml</a>
+        </div>
     </section>
     <!-- ***** Projects Area Ends ***** -->
 
     <!-- ***** Resume Area Starts ***** -->
     <section class="section" id="resume">
         <div class="section-heading">
-            <h6>Resume</h6>
+            <h6 style="margin-bottom: 0px">Resume</h6>
         </div>
+        <iframe src="https://drive.google.com/file/d/17wAyWq9P16IaKbdZysU3A5rOFq2hSX53/preview" width="100%" height="500px" style="display: block"></iframe>
     </section>
     <!-- ***** Resume Area Ends ***** -->
     
     <!-- ***** Contact Area Starts ***** -->
     <section class="section" id="contact">
         <div class="section-heading">
-            <h6>Contact</h6>
+            <h6 style="margin-top: 0px">Contact</h6>
         </div>
+        <p style="text-align: center; padding-bottom:50px">
+          Email: agbhat@andrew.cmu.edu</br></br>
+          Cell: 215-421-8957
+        </p>
     </section>
     <!-- ***** Contact Area Ends ***** -->
 
