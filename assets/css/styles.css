@@ -488,6 +488,12 @@ h2 span {
   display: table;
 }
 
+@media (max-width: 1000px) {
+  .column2 {
+    width: 100%;
+  }
+}
+
 ul.AGI {
   padding-left: 1%;
 }
