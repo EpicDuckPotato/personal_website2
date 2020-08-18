@@ -301,8 +301,8 @@ a.text-button-icon:hover i {
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.25px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 12px;
+  margin-bottom: 12px;
   padding-top: 5%;
   padding-bottom: 5%;
 }
@@ -382,6 +382,67 @@ banner
   position: relative;
   display: inline-block;
   margin: 0 auto;
+}
+
+.section-content {
+  padding: 24px;
+}
+
+p {
+  color: #000000;
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 36px;
+  color: #287e7d;
+  padding-bottom: 24px;
+}
+
+h2 span {
+  display: block;
+  font-size: 24px;
+  color: #287e7d;
+}
+
+/* Three image containers */
+.column3 {
+  float: left;
+  width: 20%;
+  padding-right: 10px;
+}
+.row3 {
+}
+
+/* Clear floats after image containers */
+.row3::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Two image containers */
+.column2 {
+  float: left;
+  width: 30%;
+  padding-right: 10px;
+}
+
+.row2 {
+}
+
+/* Clear floats after image containers */
+.row2::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h4 {
+  text-decoration: underline;
+  font-size: 30px;
+  color: #000000;
+  padding-bottom: 24px;
 }
 
 *,

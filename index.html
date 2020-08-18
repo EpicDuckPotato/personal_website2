@@ -66,6 +66,9 @@
         <div class="section-heading">
             <h6>About</h6>
         </div>
+        <div class="section-content">
+          <p>I'm a junior at Carnegie Mellon, majoring in electrical and computer engineering (ECE) with a minor in robotics. Much of my recent work has been in state estimation, both for robotic systems--snake robots--and for biological systems--populations of weakly electric fish. When I'm not diving into research, you can find me reading, playing piano, and practicing parkour.</p>
+        </div>
     </section>
     <!-- ***** About Area Ends ***** -->
 
@@ -73,6 +76,53 @@
     <section class="section" id="work">
         <div class="section-heading">
             <h6>Work</h6>
+        </div>
+        <div class="section-content">
+          <h2>Carnegie Mellon University: Biorobotics Lab
+            <span>Undergraduate Researcher (January 2019-present)</span>
+          </h2>
+          <p>Since freshman year, I've been doing research at the Biorobotics Lab, mainly on state estimation and control for snake robots. I outline some of my projects below.</p></br>
+
+          <h4>Stereo Visual Odometry</h4>
+          <p>I developed a pipeline to estimate the position and orientation of a moving camera using OpenCV and ROS, performing nonlinear optimization using Ceres Solver. Below are the results on the KITTI dataset. One of my current goals is to integrate other sensors into this pipeline and use it for snake robots.</p></br>
+          <p>Code (C++): <a href="https://github.com/EpicDuckPotato/stereo_vo/tree/bundle_adjustment">https://github.com/EpicDuckPotato/stereo_vo/tree/bundle_adjustment</a></p></br>
+          </p>
+          <img src="assets/images/kitti.gif" alt="Visual Odometry" style="max-width: 50%"></br></br>
+
+          <h4>Extended Kalman Filter</h4>
+          <p>I wrote an extended Kalman filter (EKF) to estimate the orientation of a snake robot. It fuses data from all the inertial measurement units (IMUs) and encoders on the snake's body, and incorporates outlier detection to account for individual sensor failures. I used the algorithm from "Robust State Estimation With Redundant Proprioceptive Sensors," by David Rollinson. I used C++ within a ROS environment.</p></br>
+          <div class="row2">
+            <div class="column2">
+              <img src="assets/images/ekf_roll.gif" alt="EKF for Rolling Snake" style="width:100%">
+            </div>
+            <div class="column2">
+              <img src="assets/images/ekf_sidewind.gif" alt="EKF for Sidewinding Snake" style="width:100%">
+            </div>
+          </div></br>
+
+          <h4><u>Shape-Based Compliant Control</u></h4>
+          <p>
+            I prototyped algorithms enabling a snake robot to maneuver past obstacles by complying the shape of its body. The algorithms were derived from "Shape-Based Compliance in Locomotion," by Matthew Travers. I primarily worked in MATLAB.
+          </p></br>
+          <div class="row2">
+            <div class="column2">
+              <img src="assets/images/pegs.gif" alt="Compliant Peg Glide" style="width:100%">
+            </div>
+            <div class="column2">
+              <img src="assets/images/temporal.gif" alt="Temporal Phase Compliance" style="width:100%">
+            </div>
+          </div></br>
+
+          <h4><u>Sensor Diagnostic Tool</u></h4>
+          <p>
+            The lab needed a tool to quickly diagnose stale sensors on the snake. I developed this tool within a wxPython GUI.
+          </p></br>
+          <img src="assets/images/imu_diagnostic.gif" alt="Diagnostic Tool" style="max-width: 100%"></br></br>
+          <h4><u>Auto-Orienting Camera Feed</u></h4>
+          <p>
+            The orientation of a snake robot's head changes constantly as it moves. Even if the snake's head is upside down relative to its starting orientation, its operator should have a right-side up camera feed. I implemented this functionality in a ROS node using Python and OpenCV.
+          </p></br>
+          <img src="assets/images/snakecam.jpg" alt="Snake Camera" style="max-width: 25%"></br></br>
         </div>
     </section>
     <!-- ***** Work Area Ends ***** -->
