@@ -364,7 +364,8 @@ banner
 /* ==== Main CSS === */
 .img-fill{
   max-width: 100%;
-  padding: 4%;
+  padding-top: 15%;
+  padding-bottom: 15%;
   display: block;
   overflow: hidden;
   position: relative;
