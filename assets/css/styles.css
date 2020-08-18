@@ -337,6 +337,7 @@ header
 .flex-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Links inside the navbar */
