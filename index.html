@@ -159,7 +159,10 @@
           <p>
             Using this algorithm, I made the lab's existing fish tracker 250 times more memory efficient. Specifically, the existing tracker used a particle filter with 250,000 particles. With my initialization method, it only needs 1,000.
           </p></br>
-          <img src="assets/images/pf1000.gif" class="pf1000 single-img" alt="Particle Filter"></br>
+          <video autoplay loop muted playsinline class="single-img pf1000">
+            <source src="assets/images/pf1000.webm" type="video/webm">
+            <source src="assets/images/pf1000.mp4" type="video/mp4">
+          </video></br></br>
           <p>
             After deriving this algorithm, I used it to design an extended Kalman filter (EKF). The EKF tracks the fish 90 times faster than the existing particle filter, and offers the same level of accuracy when certain physical assumptions hold. Understanding when these assumptions break down is an area of future research.
           </p></br>
