@@ -79,7 +79,7 @@
           </h2>
           <p>Since freshman year, I've been doing research at the Biorobotics Lab, mainly on state estimation and control for snake robots. I outline some of my projects below.</p></br>
           <h4>Underwater Snake Control</h4>
-          <p>My current research concerns control algorithms for underwater snake robots. Specifically, I'm developing control schemes that allow these robots to operate in highly confined spaces, like pipes. I'm running simulations using C++, ROS, and CoppeliaSim.</p></br>
+          <p>My current research concerns control algorithms for underwater snake robots. Specifically, I'm developing control schemes that allow these robots to operate in confined spaces, like pipes. I'm running simulations using C++, ROS, and CoppeliaSim.</p></br>
           </p>
           <video autoplay loop muted playsinline style="max-width:100%">
             <source src="assets/images/humrs.webm" type="video/webm">
@@ -163,21 +163,21 @@
             </div>
           </div></br>
           <p>
-            Using this algorithm, I made the lab's existing fish tracker 500 times more memory efficient. Specifically, the existing tracker used a particle filter with 250,000 particles. With my initialization method, it only needs 500.
+            Using this algorithm, I made the lab's existing fish tracker 40 times more memory efficient. Specifically, the existing tracker used a particle filter with 20,000 particles. With my initialization method, it achieves similar accuracy with only 500.
           </p></br>
           <video autoplay loop muted playsinline class="single-img pf500">
             <source src="assets/images/pf500.webm" type="video/webm">
             <source src="assets/images/pf500.mp4" type="video/mp4">
           </video></br></br>
           <p>
-            After deriving this algorithm, I used it to design an extended Kalman filter (EKF). The EKF tracks the fish 90 times faster than the existing particle filter, and offers the same level of accuracy when certain physical assumptions hold. Understanding when these assumptions break down is an area of future research.
+            I also used the algorithm to design an extended Kalman filter (EKF), with the goal of improving the tracker's speed. While this worked well in certain cases (as below), the particle filter still achieved a better accuracy on average.
           </p></br>
           <video autoplay loop muted playsinline class="single-img fish-ekf">
             <source src="assets/images/fish_ekf.webm" type="video/webm">
             <source src="assets/images/fish_ekf.mp4" type="video/mp4">
           </video></br></br>
           <p>
-            I was awarded <a href="https://youtu.be/vbt3NjwsF-8">"Best Presentation"</a> at the final REU seminar for my work (the seminar was held remotely due to the COVID-19 pandemic). I primarily worked in MATLAB.
+            I was awarded <a href="https://youtu.be/vbt3NjwsF-8">"Best Presentation"</a> at the final REU seminar for my work, and I presented my research at SICB 2021 (both were held remotely due to the COVID-19 pandemic). I primarily worked in MATLAB.
           </p></br>
 
           <h2>Analytical Graphics Inc.
