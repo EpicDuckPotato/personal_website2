@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Hey, it's Anoop! I'm an electrical and computer engineering major at Carnegie Mellon, with an interest in robotics. Much of my recent work has been in control and state estimation, both for robotic systems--snake robots--and for biological systems--populations of weakly electric fish. When I'm not diving into research, you can find me reading, playing piano, and practicing parkour.">
+    <meta name="author" content="Anoop Bhat">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Anoop Bhat's Personal Website</title>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header>
+        <div class="navigationbar flex-container">
+            <a href="index.html#top" class="active">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="work.html">Work</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    
+    <!-- ***** Projects Area Starts ***** -->
+    <section class="section" id="projects">
+        <div class="section-heading">
+            <h6>Projects</h6>
+        </div>
+        <div class="section-content">
+            <h2>Shipbot
+              <span>February 2021-May 2021</span>
+            </h2>
+            <p>
+              For my Mechatronic Design class, I worked on a team of four to build a robot that could autonomously actuate devices on a ship. One of my key accomplishments was implementing a particle filter to estimate the robot's pose from an unknown initial pose, using four time-of-flight sensors and an IMU. This earned us the "Best coolness factor" award. Otherwise, I was responsible for controlling the robot arm and integrating our subsystems together within a ROS software stack. Here's our public presentation video:</br>
+            </p>
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/YtwaVO7kogo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></br></br>
+            <p>Website: <a href="https://sites.google.com/andrew.cmu.edu/cmu-sea-cucumbers/home">https://sites.google.com/andrew.cmu.edu/cmu-sea-cucumbers/home</a></br></br></p>
+            <p>Code (Python, C++, ROS): <a href="https://github.com/Sea-Cucumbers/shipbot_ros">https://github.com/Sea-Cucumbers/shipbot_ros</a></br></br></p>
+            <h2>Coverage with a Quadrotor
+              <span>April 2021-May 2021</span>
+            </h2>
+            <p>
+              I worked on a team to write a motion planner for a drone to map an unknown environment. We implemented the rapidly-exploring random tree (RRT) planner from "Receding Horizon Next-Best-View Planner for 3D Exploration," by Bircher et. al. We also explored combining this planner with an A* planner to reduce the distance travelled to unmapped cells. You can find a video of our planner in action, as well as our report, below.</br>
+            </p>
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/IgNr0s9qyZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></br></br>
+
+            <p>Code (C++, ROS): <a href="https://github.com/EpicDuckPotato/nbv_mapping">https://github.com/EpicDuckPotato/nbv_mapping</a></br></br></p>
+            <p>Report: <a href="https://drive.google.com/file/d/1MyWw06rmLpYdQRMqKb1Skkvk7v8lF3Zz/view?usp=sharing">https://drive.google.com/file/d/1MyWw06rmLpYdQRMqKb1Skkvk7v8lF3Zz/view?usp=sharing</a></br></br></p>
+            <h2>Deep Learning for Music Generation
+              <span>November 2020-December 2020</span>
+            </h2>
+            <p>
+              I worked on a team to compare neural network architectures in their ability to generate music. We trained recurrent networks--LSTMs and GRUs--as well as a Transformer network, on piano music from the MusicNet and MAESTRO datasets. We also designed a novel architecture for generating scores for multiple instruments, consisting of two separate networks: a composer network, which generates the notes, and an assigner, which assigns notes to instruments. We trained the composer to generate relatively melodic music, but failed to train the assigner. You can find some of our networks' music below.</br>
+            </p>
+
+            <div class="row2">
+              <div class="column2">
+                <figure>
+                  <audio controls>
+                    <source src="assets/audio/lstm_everything.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+                </figure>
+              </div>
+              <div class="column2">
+                <figure>
+                  <audio controls>
+                    <source src="assets/audio/sc_gru_midi.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+                </figure>
+              </div>
+            </div></br>
+            <p>Code (Python): <a href="https://github.com/EpicDuckPotato/music_generation701">https://github.com/EpicDuckPotato/music_generation701</a></br></br></p>
+            <p>Report: <a href="https://drive.google.com/file/d/1wZAJhwMZ3dRPhr5zNYguLUoYh86goOcL/view?usp=sharing">https://drive.google.com/file/d/1wZAJhwMZ3dRPhr5zNYguLUoYh86goOcL/view?usp=sharing</a></br></br></p>
+            <h2>Scribble
+              <span>June 2020-August 2020</span>
+            </h2>
+            <p>
+              I trained a neural network to generate handwriting for a given input string, using the network architecture from Alex Graves' famous paper "Generating Sequences With Recurrent Neural Networks." I implemented the network in PyTorch.</br>
+            </p>
+
+            <div class="row2">
+              <div class="column2">
+                <figure>
+                  <video autoplay loop muted playsinline style="width:100%">
+                    <source src="assets/images/hello_world.webm" type="video/webm">
+                    <source src="assets/images/hello_world.mp4" type="video/mp4">
+                  </video>
+                  <figcaption>Input: "Hello world!"</figcaption>
+                </figure>
+              </div>
+              <div class="column2">
+                <figure>
+                  <video autoplay loop muted playsinline style="width:100%">
+                    <source src="assets/images/myname.webm" type="video/webm">
+                    <source src="assets/images/myname.mp4" type="video/mp4">
+                  </video>
+                  <figcaption>Input: "My name is Anoop Bhat"</figcaption>
+                </figure>
+              </div>
+            </div></br>
+            <p>I think the coolest part of this project is that the network uses Gaussian mixture models to mimic human-like randomness. For example, the samples below were generated from the same inputs as above, with vastly different results.</p>
+            <div class="row2">
+              <div class="column2">
+                <figure>
+                  <video autoplay loop muted playsinline style="width:100%">
+                    <source src="assets/images/hello_world2.webm" type="video/webm">
+                    <source src="assets/images/hello_world2.mp4" type="video/mp4">
+                  </video>
+                  <figcaption>Input: "Hello world!"</figcaption>
+                </figure>
+              </div>
+              <div class="column2">
+                <figure>
+                  <video autoplay loop muted playsinline style="width:100%">
+                    <source src="assets/images/myname2.webm" type="video/webm">
+                    <source src="assets/images/myname2.mp4" type="video/mp4">
+                  </video>
+                  <figcaption>Input: "My name is Anoop Bhat"</figcaption>
+                </figure>
+              </div>
+            </div></br>
+            <p>Code (Python): <a href="https://colab.research.google.com/drive/1O1newbojussOslQkaOxmYnI6PtW_WwQ9?usp=sharing">https://colab.research.google.com/drive/1O1newbojussOslQkaOxmYnI6PtW_WwQ9?usp=sharing</a></br></br></p>
+            <h2>Robotic Medical Assistant
+              <span>April 2020-May 2020</span>
+            </h2>
+            <p>
+              For my final project in "Introduction to Robotics," I designed and controlled a nasal swabbing robot within a Gazebo simulation environment.</br>
+            </p></br>
+            <video autoplay loop muted playsinline class="single-img swab">
+              <source src="assets/images/swab.webm" type="video/webm">
+              <source src="assets/images/swab.mp4" type="video/mp4">
+            </video></br></br>
+            <p>
+              Code (C++): <a href="https://github.com/EpicDuckPotato/RobotSwabber">https://github.com/EpicDuckPotato/RobotSwabber</a>
+            </p></br>
+            <h2>Rube Goldberg Machine
+              <span>January 2020</span>
+            </h2>
+            <p>
+              For the first lab in "Introduction to Robotics," I worked on a team of three to build a Rube Goldberg machine in a week, designed to fit various mechanical constraints. The first video below is the initial test for our launch mechanism, which was one of my favorite parts of the project. The second is a video showing the whole machine in action. 
+            </p></br>
+            <div class="aspect-ratio">
+              <iframe src="https://www.youtube.com/embed/YFOJCkSj1Ig" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></br>
+            </div>
+            <div class="aspect-ratio">
+              <iframe src="https://www.youtube.com/embed/-5_MKgP9crs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></br>
+            </div></br>
+            <h2>Robot Kinematics and Dynamics Capstone
+              <span>November 2019-December 2019</span>
+            </h2>
+            <p>
+              For my final project in "Robot Kinematics and Dynamics," I programmed a 5 degree-of-freedom robotic arm to traverse a series of narrow mazes without touching the sides. I implemented trajectory planning using inverse kinematics and spline interpolation, as well as gravity compensation, all in MATLAB.
+            </p></br>
+            <img src="assets/images/capstone_arm.png" class="capstone-arm single-img" alt="Capstone Arm"/></br>
+            <h2>Hack the Universe
+              <span>February 2019</span>
+            </h2>
+            <p>
+              One of the fundamental problems in quantum mechanics is finding the "ground state" wave function of a quantum system. For many-body systems, simply storing this wave function requires an impractically large amount of memory, and computing it becomes infeasible using traditional methods.</br></br>
+              During Hack the Universe, I worked on a team to compute the ground state wave function using a neural network, specifically a restricted Boltzmann machine. We implemented the algorithm from "Solving the Quantum Many-Body Problem with Artificial Neural Networks," by Giuseppe Carleo.</br></br>
+              Code (Python): <a href="https://github.com/evannw/htuquantumml">https://github.com/evannw/htuquantumml</a></p></br>
+              <img src="assets/images/schrodinger.png" alt="Schrodinger's Equation" class="single-img"></br></br>
+            <h2>Trobots
+              <span>January 2019</span>
+            </h2>
+            <p>For Build18, I worked on a team to build a robotic cat that tracks a flashlight. We ran OpenCV on a Raspberry Pi, which communicated with an Arduino to control the robot's motors.</p></br>
+            <div class="row2">
+              <div class="column2">
+                <img src="assets/images/trobot.jpg" alt="Trobot" style="width:100%">
+              </div>
+              <div class="column2">
+                <img src="assets/images/trobot_hats.jpg" alt="Trobots with Hats" style="width:100%; padding-bottom: 1%"></br>
+                <img src="assets/images/trobot_hats_back.jpg" alt="Trobots with Hats" style="width:100%">
+              </div>
+            </div></br>
+        </div>
+    </section>
+    <!-- ***** Projects Area Ends ***** -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+
+  </body>
+</html>

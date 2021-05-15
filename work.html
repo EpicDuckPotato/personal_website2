@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Anoop Bhat">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Work</title>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    <!-- ***** Header Area Start ***** -->
+    <header>
+        <div class="navigationbar flex-container">
+            <a href="index.html#top" class="active">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="work.html">Work</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    
+    <!-- ***** Work Area Starts ***** -->
+    <section class="section" id="work">
+        <div class="section-heading">
+            <h6>Work</h6>
+        </div>
+        <div class="section-content">
+          <h2>Carnegie Mellon University: Biorobotics Lab
+            <span>Undergraduate Researcher (January 2019-present)</span>
+          </h2>
+          <p>Since freshman year, I've been doing research at the Biorobotics Lab, mainly on state estimation and control for snake robots. I outline some of my projects below.</p></br>
+          <h4>Underwater Snake Control</h4>
+          <p>My latest research concerns control algorithms for underwater snake robots. One of my key accomplishments so far has been implementing a closed-loop heading controller using feedback from a complementary filter. The algorithm is based on "Control on the sphere and reduced attitude stabilization," by Bullo et. al.</p></br>
+          <iframe width="1280" height="720" src="https://www.youtube.com/embed/tviRb-NMwh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></br></br>
+          <p>My eventual goal is to transfer my trajectory-following work from simulation onto the physical robot:</p></br>
+          <iframe width="1280" height="720" src="https://www.youtube.com/embed/LVO49yCCieo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></br></br>
+          <p>I've primarily been working with C++ and ROS, running simulations in CoppeliaSim.</p></br>
+          <h4>Stereo Visual Odometry</h4>
+          <p>I developed a pipeline to estimate the position and orientation of a moving camera using OpenCV and ROS, performing nonlinear optimization using Ceres Solver. Below are the results on the KITTI dataset. One of my current goals is to integrate other sensors into this pipeline and use it for snake robots.</p></br>
+          <p>Code (C++): <a href="https://github.com/EpicDuckPotato/stereo_vo/tree/bundle_adjustment">https://github.com/EpicDuckPotato/stereo_vo/tree/bundle_adjustment</a></p></br>
+          </p>
+          <video autoplay loop muted playsinline style="max-width:100%">
+            <source src="assets/images/kitti.webm" type="video/webm">
+            <source src="assets/images/kitti.mp4" type="video/mp4">
+          </video></br></br>
+          <h4>Extended Kalman Filter</h4>
+          <p>I wrote an extended Kalman filter (EKF) to estimate the orientation of a snake robot. It fuses data from all the inertial measurement units (IMUs) and encoders on the snake's body, and incorporates outlier detection to account for individual sensor failures. I used the algorithm from "Robust State Estimation With Redundant Proprioceptive Sensors," by David Rollinson. I used C++ within a ROS environment.</p></br>
+          <div class="row2">
+            <div class="column2">
+              <video autoplay loop muted playsinline style="width:100%">
+                <source src="assets/images/ekf_roll.webm" type="video/webm">
+                <source src="assets/images/ekf_roll.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column2">
+              <video autoplay loop muted playsinline style="width:100%">
+                <source src="assets/images/ekf_sidewind.webm" type="video/webm">
+                <source src="assets/images/ekf_sidewind.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div></br>
+
+          <h4><u>Shape-Based Compliant Control</u></h4>
+          <p>
+            I prototyped algorithms enabling a snake robot to maneuver past obstacles by complying the shape of its body. The algorithms were derived from "Shape-Based Compliance in Locomotion," by Matthew Travers. I primarily worked in MATLAB.
+          </p></br>
+          <div class="row2">
+            <div class="column2">
+              <video autoplay loop muted playsinline style="width:100%">
+                <source src="assets/images/pegs.webm" type="video/webm">
+                <source src="assets/images/pegs.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column2">
+              <video autoplay loop muted playsinline style="width:100%">
+                <source src="assets/images/temporal.webm" type="video/webm">
+                <source src="assets/images/temporal.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div></br>
+
+          <h4><u>Sensor Diagnostic Tool</u></h4>
+          <p>
+            The lab needed a tool to quickly diagnose stale sensors on the snake. I developed this tool within a wxPython GUI.
+          </p></br>
+          <video autoplay loop muted playsinline class="single-img imu-diagnostic">
+            <source src="assets/images/imu_diagnostic.webm" type="video/webm">
+            <source src="assets/images/imu_diagnostic.mp4" type="video/mp4">
+          </video></br></br>
+          <h4><u>Auto-Orienting Camera Feed</u></h4>
+          <p>
+            The orientation of a snake robot's head changes constantly as it moves. Even if the snake's head is upside down relative to its starting orientation, its operator should have a right-side up camera feed. I implemented this functionality in a ROS node using Python and OpenCV.
+          </p></br>
+          <img src="assets/images/snakecam.jpg" class="snakecam single-img" alt="Snake Camera"></br></br>
+
+          <h2>Johns Hopkins University: LIMBS Lab
+            <span>NSF REU Research Intern (May 2020-July 2020)</span>
+          </h2>
+          <p>
+            As a researcher at Johns Hopkins, I developed algorithms to estimate the pose of weakly electric fish with an array of electrodes. Estimating these fishes' states will be useful in understanding their group behavior, as well as the ecology of their environment.</br></br>
+
+            One of my main accomplishments was deriving a physics-based algorithm to efficiently initialize electric fish trackers. My algorithm relies on the interpolated potential and gradient fields shown below. The actual fish pose is shown using a black ellipse, and the electrodes are shown with black dots.
+          </p></br>
+          <div class="row3">
+            <div class="column3">
+              <img src="assets/images/init1.png" alt="Potential Field 1" style="width:100%">
+            </div>
+            <div class="column3">
+              <img src="assets/images/init2.png" alt="Potential Field 2" style="width:100%">
+            </div>
+            <div class="column3">
+              <img src="assets/images/init3.png" alt="Potential Field 3" style="width:100%">
+            </div>
+          </div></br>
+          <p>
+            Using this algorithm, I made the lab's existing fish tracker 40 times more memory efficient. Specifically, the existing tracker used a particle filter with 20,000 particles. With my initialization method, it achieves similar accuracy with only 500.
+          </p></br>
+          <video autoplay loop muted playsinline class="single-img pf500">
+            <source src="assets/images/pf500.webm" type="video/webm">
+            <source src="assets/images/pf500.mp4" type="video/mp4">
+          </video></br></br>
+          <p>
+            I also used the algorithm to design an extended Kalman filter (EKF), with the goal of improving the tracker's speed. While this worked well in certain cases (as below), the particle filter still achieved a better accuracy on average.
+          </p></br>
+          <video autoplay loop muted playsinline class="single-img fish-ekf">
+            <source src="assets/images/fish_ekf.webm" type="video/webm">
+            <source src="assets/images/fish_ekf.mp4" type="video/mp4">
+          </video></br></br>
+          <p>
+            I was awarded <a href="https://youtu.be/vbt3NjwsF-8">"Best Presentation"</a> at the final REU seminar for my work, and I presented my research at SICB 2021 (both were held remotely due to the COVID-19 pandemic). I primarily worked in MATLAB.
+          </p></br>
+
+          <h2>Analytical Graphics Inc.
+            <span>Software Engineering Intern (May 2019-July 2019)</span>
+          </h2>
+          <p>
+            As an intern at AGI, I worked on STK Components, an aerospace simulation API for C# and Java. My main accomplishments were:
+          </p></br>
+          <ul class="AGI">
+            <li>Enabling higher resolution terrain simulation by adding support for a new type of terrain file</li>
+            <li>Writing a <a href="https://help.agi.com/AGIComponents/html/NumericalIntegrators.htm">tutorial page</a> for Components' numerical integrators, analyzing their effectiveness for various systems of differential equations</li>
+            <li>Testing Components’ astronomical capabilities against the Standards of Fundamental Astronomy</li>
+            <li>Adding new coordinate types (<a href="https://help.agi.com/STKComponents/html/T_AGI_Foundation_Geometry_DynamicDelaunayElements.htm">DynamicDelaunayElements</a>, <a href="https://help.agi.com/STKComponents/html/T_AGI_Foundation_Geometry_DynamicDelaunayElements.htm">DynamicEquinoctialElements</a>, <a href="https://help.agi.com/STKComponents/html/T_AGI_Foundation_Geometry_DynamicDelaunayElements.htm">DynamicKozaiIzsakMeanElements</a>) for orbit representation.</li>
+          </ul>
+        </div>
+    </section>
+    <!-- ***** Work Area Ends ***** -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+
+  </body>
+</html>
