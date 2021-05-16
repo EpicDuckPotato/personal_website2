@@ -65,15 +65,14 @@
           </div></br>
           <p>I've primarily been working with C++ and ROS, running simulations in CoppeliaSim.</p></br>
           <h4>Stereo Visual Odometry</h4>
-          <p>I developed a pipeline to estimate the position and orientation of a moving camera using OpenCV and ROS, performing nonlinear optimization using Ceres Solver. Below are the results on the KITTI dataset. One of my current goals is to integrate other sensors into this pipeline and use it for snake robots.</p></br>
+          <p>I developed a pipeline to estimate the position and orientation of a moving camera using OpenCV and ROS, performing nonlinear optimization using Ceres Solver. Below are the results on the KITTI dataset. One of my goals is to integrate other sensors into this pipeline and use it for snake robots.
+          </p></br>
+          <div class="aspect-ratio">
+            <iframe src="https://www.youtube.com/embed/KY5QVMQgbKI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></br>
+          </div></br>
           <p>Code (C++): <a href="https://github.com/EpicDuckPotato/stereo_vo/tree/bundle_adjustment">https://github.com/EpicDuckPotato/stereo_vo/tree/bundle_adjustment</a></p></br>
-          </p>
-          <video autoplay loop muted playsinline style="max-width:100%">
-            <source src="assets/images/kitti.webm" type="video/webm">
-            <source src="assets/images/kitti.mp4" type="video/mp4">
-          </video></br></br>
           <h4>Extended Kalman Filter</h4>
-          <p>I wrote an extended Kalman filter (EKF) to estimate the orientation of a snake robot. It fuses data from all the inertial measurement units (IMUs) and encoders on the snake's body, and incorporates outlier detection to account for individual sensor failures. I used the algorithm from "Robust State Estimation With Redundant Proprioceptive Sensors," by David Rollinson. I used C++ within a ROS environment.</p></br>
+          <p>I wrote an extended Kalman filter (EKF) to estimate the orientation of a snake robot. It fuses data from all the inertial measurement units (IMUs) and encoders on the snake's body, and incorporates outlier detection to account for individual sensor failures. I used the algorithm from "Robust State Estimation With Redundant Proprioceptive Sensors," by David Rollinson. I used C++ and ROS.</p></br>
           <div class="row2">
             <div class="column2">
               <video autoplay loop muted playsinline style="width:100%">
